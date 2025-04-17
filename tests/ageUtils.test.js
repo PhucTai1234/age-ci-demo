@@ -1,4 +1,4 @@
-const { calculateAge, isAdult } = require('../ageUtils');
+const { calculateAge, isAdult, isSenior, isTeen } = require('../ageUtils');
 
 describe('Age utilities', () => {
   test('calculates age for someone born in 2000', () => {
@@ -19,5 +19,25 @@ describe('Age utilities', () => {
 
   test('checks if someone born in 2020 is not an adult', () => {
     expect(isAdult(2020)).toBe(false);
+  });
+
+  test('checks if someone born in 1960 is a senior', () => {
+    expect(isSenior(1960)).toBe(true);
+  });
+
+  test('checks if someone born in 2000 is not a senior', () => {
+    expect(isSenior(2000)).toBe(false);
+  });
+
+  test('checks if someone born in 2010 is a teen', () => {
+    expect(isTeen(2010)).toBe(true);
+  });
+
+  test('checks if someone born in 2000 is not a teen', () => {
+    expect(isTeen(2000)).toBe(false);
+  });
+
+  test('checks if someone born in 2012 is a teen', () => {
+    expect(isTeen(2012)).toBe(true);
   });
 });
