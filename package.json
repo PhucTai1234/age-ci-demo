@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Demo CI pipeline for age utilities",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0"
   }
 }
